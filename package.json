@@ -1,9 +1,11 @@
 {
   "name": "dom-tree-creator",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A package capable of return an object with the DOM tree. Each element has a tag, children elements and attributes.",
-  "main": "index.js",
+  "main": "./distribution/index.js",
   "scripts": {
+    "build": "babel source --presets babel-preset-es2015 --out-dir distribution",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/williamegomez/DOMTree/issues"
   },
-  "homepage": "https://github.com/williamegomez/DOMTree#readme"
+  "homepage": "https://github.com/williamegomez/DOMTree#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

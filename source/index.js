@@ -1,7 +1,9 @@
-getAttributes = function (template, reg) {
+"use strict";
+
+function getAttributes (template, reg) {
   const templateSane = template.replace(/\t|\n/g, '');
-  tags = []
-  match = reg.exec(templateSane);
+  const tags = []
+  var match = reg.exec(templateSane);
   while (match != null) {
     if (match[2] && match[2] != '/') {
       tags.push(match[2])
@@ -14,10 +16,10 @@ getAttributes = function (template, reg) {
   return tags
 }
 
-getTags = function (template, reg) {
+function getTags (template, reg) {
   const templateSane = template.replace(/\t|\n/g, '');
-  tags = []
-  match = reg.exec(templateSane);
+  const tags = []
+  var match = reg.exec(templateSane);
   while (match != null) {
     if (match[1]) {
       tags.push(match[1])
@@ -29,11 +31,11 @@ getTags = function (template, reg) {
   return tags
 }
 
-separateAttributes = function(attributeString) {
+function separateAttributes (attributeString) {
   var reg = /((\w|\-)*)=\"([^\"]*)"/g
 
-  attributesArray = []
-  match = reg.exec(attributeString);
+  var attributesArray = []
+  var match = reg.exec(attributeString);
   while (match != null) {
     attributesArray.push({
     attributeName: match[1],
@@ -45,7 +47,7 @@ separateAttributes = function(attributeString) {
   return attributesArray
 }
 
-getChildrenTags = function(tagsArray, attributes) {
+function getChildrenTags (tagsArray, attributes) {
   if (tagsArray.length === 0) {
     return []
   }
@@ -86,7 +88,7 @@ getChildrenTags = function(tagsArray, attributes) {
   return childrenTags
 }
 
-getDomTree = function (template) {
+module.exports = function getDomTree (template) {
   var reg = /<(\w+)[^>]*>|<(\/(\w+)[^>]*)>/g
   const Tags = getTags(template, reg)
 
@@ -95,5 +97,3 @@ getDomTree = function (template) {
 
   return getChildrenTags(Tags, Attributes)
 }
-
-exports.getDomTree
