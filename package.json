@@ -1,0 +1,23 @@
+{
+  "name": "domtree",
+  "version": "1.0.0",
+  "description": "A package capable of return an object with the DOM tree. Each element has a tag, children elements and attributes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamegomez/DOMTree.git"
+  },
+  "keywords": [
+    "DOM",
+    "tree"
+  ],
+  "author": "William Gómez <william.gomex@gmail.com> (https://github.com/williamegomez)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamegomez/DOMTree/issues"
+  },
+  "homepage": "https://github.com/williamegomez/DOMTree#readme"
+}
