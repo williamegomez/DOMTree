@@ -2,6 +2,7 @@ How to use it:
 
 import getDomTree from 'dom-tree-creator'
 
+```
 const domTree = getDomTree((`
   <p class="coso">
     <a>ink here</a>
@@ -11,10 +12,10 @@ const domTree = getDomTree((`
     <li><button></button></li>
     <li><button></button></li>
   </ul>`))
-
+```
 Get the tree:
 
-
+```
 [
   {
     "parent": "p",
@@ -66,3 +67,4 @@ Get the tree:
     "attributes": []
   }
 ]
+```
