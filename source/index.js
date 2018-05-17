@@ -92,7 +92,7 @@ module.exports = function getDomTree (template) {
   var reg = /<(\w+)[^>]*>|<(\/(\w+)[^>]*)>/g
   const Tags = getTags(template, reg)
 
-  reg = /<(\w+)\s*([^>]+)*>/g
+  reg = /<(\w+)\s*([^>]+)*>|<(\/(\w+)[^>]*)>/g
   const Attributes = getAttributes(template, reg)
 
   return getChildrenTags(Tags, Attributes)

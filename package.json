@@ -1,6 +1,6 @@
 {
   "name": "dom-tree-creator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A package capable of return an object with the DOM tree. Each element has a tag, children elements and attributes.",
   "main": "./distribution/index.js",
   "scripts": {
