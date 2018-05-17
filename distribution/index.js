@@ -70,7 +70,7 @@ function getChildrenTags(tagsArray, attributes) {
     var limitend = indexFinish;
     while (subArray.indexOf(tag) != -1) {
       indexFinish = tempArray.slice(indexFinish + 1).indexOf('/' + tag) + indexFinish + 1;
-      subArray = tempArray.slice(i + 1, limitend);
+      subArray = tempArray.slice(limitinit + 1, limitend);
       limitinit = limitinit + 1;
     }
 
