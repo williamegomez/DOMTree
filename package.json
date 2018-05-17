@@ -1,5 +1,5 @@
 {
-  "name": "domtree",
+  "name": "dom-tree-creator",
   "version": "1.0.0",
   "description": "A package capable of return an object with the DOM tree. Each element has a tag, children elements and attributes.",
   "main": "index.js",
